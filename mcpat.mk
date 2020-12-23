@@ -13,10 +13,10 @@ INCS = -lm
 
 ifeq ($(TAG),dbg)
   DBG = -Wall 
-  OPT = -ggdb -g -O0 -DNTHREADS=1 -Icacti
+  OPT = -ggdb -g -O0 -DNTHREADS=1 -Icacti -m64
 else
   DBG = 
-  OPT = -O3 -msse2 -mfpmath=sse -DNTHREADS=$(NTHREADS) -Icacti
+  OPT = -O3 -msse2 -mfpmath=sse -DNTHREADS=$(NTHREADS) -Icacti -m64
   #OPT = -O0 -DNTHREADS=$(NTHREADS)
 endif
 
